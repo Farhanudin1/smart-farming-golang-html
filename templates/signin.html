@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Styling for the page */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.5;
+            font-size: 16px;
+            color: #000000;
+            background-color: #f0f0f0;
+            background-image: url('https://raw.githubusercontent.com/Farhanudin1/deep-learning-swasembada-pangan/d2a6e07cea8548d238bf0695fee226797d5f1125/Gambar1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+        }
+
+        .fh5co-form {
+            padding: 30px;
+            background: rgba(164, 199, 167, 0.5);
+            box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            margin-left: 50px;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                justify-content: center;
+            }
+
+            .fh5co-form {
+                width: 90%;
+                margin-left: 0;
+            }
+        }
+
+        .fh5co-form h2 {
+            text-transform: none;
+            letter-spacing: 2px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        .fh5co-form .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .fh5co-form .form-control {
+            font-size: 16px;
+            font-weight: 300;
+            border: none;
+            border-bottom: 2px solid #797979;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 10px 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .fh5co-form .form-control:focus {
+            border-bottom: 2px solid #00ff11;
+        }
+
+        .fh5co-form .form-control::placeholder {
+            color: #808080;
+            font-style: italic;
+        }
+
+        .btn-signin {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+            background: transparent;
+            color: rgba(0, 109, 0, 0.9);
+            border: 1px solid rgba(0, 109, 0, 0.9);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-signin:hover {
+            background: rgba(0, 255, 0, 0.5);
+            color: #ffffff;
+        }
+
+        .fh5co-form .form-group p {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .fh5co-form .form-group p a {
+            color: #0f6d00;
+            text-decoration: none;
+        }
+        
+        .fh5co-form .form-group p a:hover {
+            color: #00ff04;
+        }
+    </style>
+</head>
+<body>
+    <div class="fh5co-form">
+        <h2>Sign In</h2>
+        <form id="sign-in-form" action="/login" method="POST" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+            <button type="submit" class="btn-signin">Sign In</button>
+        </form>
+        <div class="form-group">
+            <p>Not registered? <a href="/forgot-password">Lupa Password</a></p>
+        </div>
+        <!-- Result of login attempt -->
+        <div id="login-result"></div>
+    </div>
+    </script>
+</body>
+</html>
