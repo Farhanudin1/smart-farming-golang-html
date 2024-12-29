@@ -110,7 +110,7 @@ func SendDataToRealtimeDatabase(token, path string, data interface{}) error {
 
 // Handler untuk melayani beranda.html
 func ServeBeranda(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/beranda.html")
+	tmpl, err := template.ParseFiles("./templates/beranda.html")
 	if err != nil {
 		http.Error(w, "Error loading template", http.StatusInternalServerError)
 		return
@@ -120,7 +120,7 @@ func ServeBeranda(w http.ResponseWriter, r *http.Request) {
 
 // Handler untuk melayani signin.html
 func ServeSignin(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/signin.html")
+	tmpl, err := template.ParseFiles("./templates/signin.html")
 	if err != nil {
 		http.Error(w, "Error loading template", http.StatusInternalServerError)
 		return
@@ -152,7 +152,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 
 // Handler untuk melayani dashboard.html
 func DashboardHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/dashboard.html")
+	tmpl, err := template.ParseFiles("./templates/dashboard.html")
 	if err != nil {
 		http.Error(w, "Error loading template", http.StatusInternalServerError)
 		return
